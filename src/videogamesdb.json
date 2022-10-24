@@ -1,0 +1,199 @@
+[
+    {
+    "id": 1,
+    "name": "God of War",
+    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+    "released": "2022-10-24",
+    "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
+    "platforms": [
+      {
+        "platform": {
+          "id": 0,
+          "slug": "string",
+          "name": "string"
+        },
+        "released_at": "string",
+        "requirements": {
+          "minimum": "string",
+          "recommended": "string"
+        }
+      }
+     ]
+    },
+
+    {
+        "id": 2,
+        "name": "The Last Of Us",
+        "description": "Set in the post-apocalyptic United States, the game tells the story of survivors Joel and Ellie as they work together to survive their westward journey across what remains of the country to find a possible cure for the modern fungal plague that has nearly decimated the entire human race.",
+        "released": "2022-10-24",
+        "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+        "platforms": [
+          {
+            "platform": {
+              "id": 0,
+              "slug": "string",
+              "name": "string"
+            },
+            "released_at": "string",
+            "requirements": {
+              "minimum": "string",
+              "recommended": "string"
+            }
+          }
+         ]
+    },
+
+    {
+        "id": 3,
+        "name": "Days Gone",
+        "description": "Ride and fight into a deadly, post pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.",
+        "released": "2022-10-24",
+        "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+        "platforms": [
+          {
+            "platform": {
+              "id": 0,
+              "slug": "string",
+              "name": "string"
+            },
+            "released_at": "string",
+            "requirements": {
+              "minimum": "string",
+              "recommended": "string"
+            }
+          }
+         ]
+    },
+
+    {
+      "id": 4,
+      "name": "God of War",
+      "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+      "released": "2022-10-24",
+      "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
+      "platforms": [
+        {
+          "platform": {
+            "id": 0,
+            "slug": "string",
+            "name": "string"
+          },
+          "released_at": "string",
+          "requirements": {
+            "minimum": "string",
+            "recommended": "string"
+          }
+        }
+       ]
+      },
+  
+      {
+          "id": 5,
+          "name": "The Last Of Us",
+          "description": "Set in the post-apocalyptic United States, the game tells the story of survivors Joel and Ellie as they work together to survive their westward journey across what remains of the country to find a possible cure for the modern fungal plague that has nearly decimated the entire human race.",
+          "released": "2022-10-24",
+          "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+          "platforms": [
+            {
+              "platform": {
+                "id": 0,
+                "slug": "string",
+                "name": "string"
+              },
+              "released_at": "string",
+              "requirements": {
+                "minimum": "string",
+                "recommended": "string"
+              }
+            }
+           ]
+      },
+  
+      {
+          "id": 6,
+          "name": "Days Gone",
+          "description": "Ride and fight into a deadly, post pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.",
+          "released": "2022-10-24",
+          "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+          "platforms": [
+            {
+              "platform": {
+                "id": 0,
+                "slug": "string",
+                "name": "string"
+              },
+              "released_at": "string",
+              "requirements": {
+                "minimum": "string",
+                "recommended": "string"
+              }
+            }
+           ]
+      },
+
+      {
+        "id": 7,
+        "name": "God of War",
+        "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+        "released": "2022-10-24",
+        "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
+        "platforms": [
+          {
+            "platform": {
+              "id": 0,
+              "slug": "string",
+              "name": "string"
+            },
+            "released_at": "string",
+            "requirements": {
+              "minimum": "string",
+              "recommended": "string"
+            }
+          }
+         ]
+        },
+    
+        {
+            "id": 8,
+            "name": "The Last Of Us",
+            "description": "Set in the post-apocalyptic United States, the game tells the story of survivors Joel and Ellie as they work together to survive their westward journey across what remains of the country to find a possible cure for the modern fungal plague that has nearly decimated the entire human race.",
+            "released": "2022-10-24",
+            "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+            "platforms": [
+              {
+                "platform": {
+                  "id": 0,
+                  "slug": "string",
+                  "name": "string"
+                },
+                "released_at": "string",
+                "requirements": {
+                  "minimum": "string",
+                  "recommended": "string"
+                }
+              }
+             ]
+        },
+    
+        {
+            "id": 9,
+            "name": "Days Gone",
+            "description": "Ride and fight into a deadly, post pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.",
+            "released": "2022-10-24",
+            "background_image": "https://as01.epimg.net/meristation/imagenes/2020/11/03/game_cover/666031971604438123.jpg",
+            "platforms": [
+              {
+                "platform": {
+                  "id": 0,
+                  "slug": "string",
+                  "name": "string"
+                },
+                "released_at": "string",
+                "requirements": {
+                  "minimum": "string",
+                  "recommended": "string"
+                }
+              }
+             ]
+        }
+]
