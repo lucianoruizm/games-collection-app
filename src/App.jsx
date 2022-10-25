@@ -1,14 +1,22 @@
-import { VideoGamesGrid } from './components/VideoGamesGrid';
+import { GamesGrid } from './components/GamesGrid';
 import styles from './App.module.css';
+import { Navbar } from './components/Navbar';
+import { HomeContainer } from './components/HomeContainer';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className={styles.title}>Video Games</h1>
       <div>
-        <VideoGamesGrid />
+        <header>
+          <Navbar />
+          <h1 className={styles.title}>Video Games</h1>
+        </header>
+        <main>
+          <HomeContainer />
+          <GamesGrid />
+        </main>
+        <Footer />
       </div>
-    </div>
   );
 }
 
