@@ -1,22 +1,32 @@
-import { GamesGrid } from './components/GamesGrid';
 import styles from './App.module.css';
 import { Navbar } from './components/Navbar';
-import { HomeContainer } from './components/HomeContainer';
 import { Footer } from './components/Footer';
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link, 
+} from 'react-router-dom';
+import { LandingPage } from './pages/LandingPage';
+import { GameDetails } from './pages/GameDetails';
 
 function App() {
   return (
-      <div>
+      <Router>
         <header>
           <Navbar />
-          <h1 className={styles.title}>Video Games</h1>
+          <Link to='/'>
+            <h1 className={styles.title}>Video Games</h1>
+          </Link>
         </header>
         <main>
-          <HomeContainer />
-          <GamesGrid />
+          <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/games/:gameId' element={<GameDetails />} />
+          </Routes>
         </main>
         <Footer />
-      </div>
+      </Router>
   );
 }
 
