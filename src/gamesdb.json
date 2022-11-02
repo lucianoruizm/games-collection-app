@@ -2,7 +2,7 @@
     {
     "id": 1,
     "name": "God of War",
-    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+    "description": "string",
     "released": "2022-10-24",
     "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
     "platforms": [

@@ -1,23 +1,68 @@
-[
+{
+  "id": 0,
+  "slug": "string",
+  "name": "string",
+  "name_original": "string",
+  "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+  "metacritic": 0,
+  "metacritic_platforms": [
     {
-    "id": 1,
-    "name": "God of War",
-    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
-    "released": "2022-10-24",
-    "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
-    "platforms": [
-      {
-        "platform": {
-          "id": 0,
-          "slug": "string",
-          "name": "string"
-        },
-        "released_at": "string",
-        "requirements": {
-          "minimum": "string",
-          "recommended": "string"
-        }
-      }
-     ]
+      "metascore": 0,
+      "url": "string"
     }
-]
+  ],
+  "released": "2018-04-18",
+  "tba": true,
+  "updated": "2022-11-02T02:27:00Z",
+  "background_image": "https://as01.epimg.net/meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
+  "background_image_additional": "string",
+  "website": "http://example.com",
+  "rating": 9,
+  "rating_top": 0,
+  "ratings": {},
+  "reactions": {},
+  "added": 0,
+  "added_by_status": {},
+  "playtime": 0,
+  "screenshots_count": 0,
+  "movies_count": 0,
+  "creators_count": 0,
+  "achievements_count": 0,
+  "parent_achievements_count": "string",
+  "reddit_url": "string",
+  "reddit_name": "string",
+  "reddit_description": "string",
+  "reddit_logo": "http://example.com",
+  "reddit_count": 0,
+  "twitch_count": "string",
+  "youtube_count": "string",
+  "reviews_text_count": "string",
+  "ratings_count": 0,
+  "suggestions_count": 0,
+  "alternative_names": [
+    "string"
+  ],
+  "metacritic_url": "string",
+  "parents_count": 0,
+  "additions_count": 0,
+  "game_series_count": 0,
+  "esrb_rating": {
+    "id": 0,
+    "slug": "everyone",
+    "name": "Everyone"
+  },
+  "platforms": [
+    {
+      "platform": {
+        "id": 0,
+        "slug": "string",
+        "name": "string"
+      },
+      "released_at": "string",
+      "requirements": {
+        "minimum": "string",
+        "recommended": "string"
+      }
+    }
+  ]
+}

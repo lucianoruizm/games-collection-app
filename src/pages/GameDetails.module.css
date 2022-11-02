@@ -1,3 +1,23 @@
-.h1 {
-    color: white;
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    max-width: 400px;
+    margin: 15px;
+    height: 80%;
+}
+
+.gameImage {
+    border-radius: 5px;
+}
+
+.gameDetails {
+    font-size: 1.5rem;
+}
+
+.fistItem {
+    margin-top: 0;
 }
