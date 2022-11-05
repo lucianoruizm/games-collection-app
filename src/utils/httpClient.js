@@ -1,5 +1,5 @@
 // API key
-const apiKey = process.env.API_KEY
+const apiKey = '0da066209f934bae82c66d77ae36eb39'
 
 // API URL 
 const url_api = "https://api.rawg.io/api/";
@@ -25,16 +25,10 @@ const currentYear = new Date().getFullYear();
 const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
-// const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
-const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
+const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
+// const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 // This is for a list of new games recently released
-const new_games = `games?key=${apiKey}&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
+const new_games = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-// const newGamesGet = () => `${ url_api }${ new_games }`;
-
-export function getNewGames () {
-    return fetch(url_api + new_games)
-      .then(result => result.json())
-      .catch(err => console.log(err))
-}
+export const newGamesGet = () => `${ url_api }${ new_games }`;

@@ -10,13 +10,14 @@
 }
 
 .gameImage {
+    width: 100%;
     border-radius: 10px;
     background-color: rgb(233, 231, 231);
 }
 
 @media (max-width: 560px) {
     .gameImage {
-        width: 80%;
+        width: 95%;
         height: auto;
     }
 }
