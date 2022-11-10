@@ -1,8 +1,13 @@
 .gameCard {
     list-style: none;
     color: white;
-    text-align: center;
+    background-color: var(--color1);
+    text-align: left;
     font-size: 1.5rem;
+    height: 300px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .gameCard:hover {
@@ -11,13 +16,20 @@
 
 .gameImage {
     width: 100%;
-    border-radius: 10px;
+    height: 70%;
     background-color: rgb(233, 231, 231);
 }
 
+.gameTitle {
+    padding: 10px 20px;
+}
+
 @media (max-width: 560px) {
-    .gameImage {
+    .gameCard {
         width: 95%;
+        font-size: 1rem;
+    }
+    .gameCard {
         height: auto;
     }
 }

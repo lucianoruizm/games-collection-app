@@ -1,3 +1,7 @@
+:root {
+    --color1: #292929;
+}
+
 .title {
     text-align: center;
     color: white;

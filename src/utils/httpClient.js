@@ -1,8 +1,8 @@
-// API key
-const apiKey = '0da066209f934bae82c66d77ae36eb39'
-
 // API URL 
 const url_api = "https://api.rawg.io/api/";
+
+// API key
+const apiKey = process.env.REACT_APP_APIKEY
 
 //Getting date
 const getCurrentMonth = function () {
@@ -26,9 +26,13 @@ const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
-// const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
+const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
-// This is for a list of new games recently released
-const new_games = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
+// This is for a list of popular games recently released
+const popularGames = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-metacritic&page_size=12`;
+const upcomingGames = `games?key=${apiKey}&dates=${currentDate},${nextYear}&ordering=-rating&page_size=12`;
+const newGames = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=12`;
 
-export const newGamesGet = () => `${ url_api }${ new_games }`;
+export const popularGamesGet = () => `${ url_api }${ popularGames }`;
+export const upcomingGamesGet = () => `${ url_api }${ upcomingGames }`;
+export const newGamesGet = () => `${ url_api }${ newGames }`;
