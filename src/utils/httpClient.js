@@ -33,6 +33,13 @@ const popularGames = `games?key=${apiKey}&dates=${lastYear},${currentDate}&order
 const upcomingGames = `games?key=${apiKey}&dates=${currentDate},${nextYear}&ordering=-rating&page_size=12`;
 const newGames = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=12`;
 
+// // Game details
+// const game_details = "games/";
+// Details Genre 
+// const gameGenres = `genres?key=${apiKey}`; 
+
 export const popularGamesGet = () => `${ url_api }${ popularGames }`;
 export const upcomingGamesGet = () => `${ url_api }${ upcomingGames }`;
 export const newGamesGet = () => `${ url_api }${ newGames }`;
+export const gameDetailsGet = game_id => `${ url_api }games/${ game_id }?key=${ apiKey }`;
+// export gameGenresGet = () => `${ url_api }`

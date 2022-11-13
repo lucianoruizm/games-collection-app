@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import styles from './GameCard.module.css';
 
-export function GameCard({ game }) {
+export function GameCard({ games }) {
+
     return (
         <li className={styles.gameCard}>
-            <Link to={'/games/' + game.id}>
+            <Link to={'/games/details/' + games.id}>
             <img
-              src={game.background_image} 
-              alt={game.name}
+              src={games.background_image} 
+              alt={games.name}
               className={styles.gameImage} 
             />
             {/* <ul>
@@ -21,7 +22,7 @@ export function GameCard({ game }) {
                     )
                    })}
             </ul> */}
-            <div className={styles.gameTitle}>{game.name}</div>
+            <div className={styles.gameTitle}>{games.name}</div>
             </Link>
         </li>
     )

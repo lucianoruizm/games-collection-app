@@ -52,19 +52,19 @@ export function GamesGrid() {
             <h1>Popular Games</h1>
             <ul className={styles.gamesGrid}>
                 {popularGames.map((popularGame) => (
-                    <GameCard key={popularGame.id} game={popularGame} />
+                    <GameCard key={popularGame.id} games={popularGame} />
                 ))}
             </ul>
             <h1>Upcoming Games</h1>
             <ul className={styles.gamesGrid}>
                 {upcomingGames.map((upcomingGame) => (
-                    <GameCard key={upcomingGame.id} game={upcomingGame} />
+                    <GameCard key={upcomingGame.id} games={upcomingGame} />
                 ))}
             </ul>
             <h1>New Games</h1>
             <ul className={styles.gamesGrid}>
                 {newGames.map((newGame) => (
-                    <GameCard key={newGame.id} game={newGame} />
+                    <GameCard key={newGame.id} games={newGame} />
                 ))}
             </ul>
         </div>

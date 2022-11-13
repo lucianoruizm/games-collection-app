@@ -22,7 +22,7 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<LandingPage />} />
-            <Route path='/games/:gameId' element={<GameDetails />} />
+            <Route path='/games/details/:gameId' element={<GameDetails />} />
           </Routes>
         </main>
         <Footer />
