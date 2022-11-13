@@ -41,5 +41,5 @@ const newGames = `games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=
 export const popularGamesGet = () => `${ url_api }${ popularGames }`;
 export const upcomingGamesGet = () => `${ url_api }${ upcomingGames }`;
 export const newGamesGet = () => `${ url_api }${ newGames }`;
-export const gameDetailsGet = game_id => `${ url_api }games/${ game_id }?key=${ apiKey }`;
+export const gameDetailsGet = (game_id) => `${ url_api }games/${ game_id }?key=${ apiKey }`;
 // export gameGenresGet = () => `${ url_api }`
