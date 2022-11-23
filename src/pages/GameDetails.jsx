@@ -2,12 +2,9 @@ import styles from './GameDetails.module.css';
 import { useParams } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import { gameDetailsGet } from '../utils/httpClient';
-// import game from './game.json';
-// import genre from './genres.json';
 
 export function GameDetails() {
     const { gameId } = useParams();
-    // console.log(gameId);
     const [gameDetails, setGameDetails] = useState([]);
 
     // useEffect(() => getGameDetails(gameId), [gameId]);
@@ -20,7 +17,6 @@ export function GameDetails() {
     //       })
     //       .catch(error => console.log(error));
     // }
-
 
     const getGameDetails = useCallback(async () => {
       try {
@@ -35,17 +31,17 @@ export function GameDetails() {
     useEffect(() => {
       getGameDetails();
     }, [getGameDetails]);
+
+    console.log(gameDetails);
     
     const {
         name,
         background_image,
         released,
-        // platforms,
+        platforms,
+        genres,
         description_raw,
-        rating,
     } = gameDetails;
-
-    console.log(gameDetails)
 
     return (
         <div className={styles.detailsContainer}>
@@ -55,16 +51,14 @@ export function GameDetails() {
               alt={name}
             />
             <div className={`${styles.col} ${styles.gameDetails}`}>
-                <p><strong>Name</strong>{name}</p>
-                {/* <p><strong>Genre</strong>: {genre.results.map(nam => nam.name).join(", ")}</p> */}
-                <p><strong>Release date</strong>: {released}</p>
-                {/* <p><strong>Platforms</strong>: {platforms.map(plat => plat.platform.slug).join(", ")}</p> */}
-                {/* <p><strong>Requirements</strong>: {platforms.map(req => req.requirements.recommended).join(", ")}</p> */}
-                <div>
-                  <h3>Description:</h3>
-                  <p>{description_raw}</p>
-                </div>
-                <p><strong>Rating</strong>: {rating}</p>
+                <p><strong>Name: </strong>{name}</p>
+                <p><strong>Genres: </strong> {genres?.map(nam => nam.name).join(", ")}</p>
+                <p><strong>Release date: </strong>{released}</p>
+                <p><strong>Platforms: </strong> {platforms?.map(plat => plat.platform.name).join(", ")}</p>
+                <p>
+                  <strong>Description: </strong>
+                  {description_raw}
+                </p>
             </div>
         </div>
     )

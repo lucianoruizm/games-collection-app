@@ -1,12 +1,9 @@
-import { GamesGrid } from "../components/GamesGrid";
 import { HomeContainer } from "../components/HomeContainer";
-import { Search } from "../components/Search";
 
 export function LandingPage() {
     return (
-        <div>
+        <main>
             <HomeContainer />
-            <GamesGrid />
-        </div>
+        </main>
     )
 }

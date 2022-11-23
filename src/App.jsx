@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 import { GameDetails } from './pages/GameDetails';
+import { Search } from './components/Search';
 
 function App() {
   return (
@@ -19,12 +20,11 @@ function App() {
             <h1 className={styles.title}>Video Games</h1>
           </Link>
         </header>
-        <main>
-          <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path='/games/details/:gameId' element={<GameDetails />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/games/details/:gameId' element={<GameDetails />} />
+        </Routes>
         <Footer />
       </Router>
   );
