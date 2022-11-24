@@ -2,13 +2,13 @@ import styles from './Search.module.css';
 import { FaSearch } from "react-icons/fa";
 import { useState } from 'react';
 import { searchGamesGet } from '../utils/httpClient';
+import { GameCard } from './GameCard';
+import stylesGrid from './GamesGrid.module.css';
 
 export function Search() {
 
     const [searchTerm, setSearchTerm] = useState("")
     const [queryGame, setQueryGame] = useState([])
-
-   
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
@@ -24,35 +24,25 @@ export function Search() {
         setQueryGame([])
         let response = await fetch(searchGamesGet(slug));
         let data = await response.json()
-        setQueryGame(data)
+        setQueryGame(data.results)
         setSearchTerm("")
     }
 
-    console.log(queryGame)
-//     fetch(searchGamesGet(slug))
-//         .then(res => res.json())
-//         .then(({queryResult}) => {
-//             queryResult === undefined ? alert('no games found') : queryGame(queryResult) 
-//         })
-
-    
-// {
-//   let response = await fetch(searchGamesGet(slug));
-//   let data = await response.json()
-//   return data;
-// }
-
-// getUserAsync('yourUsernameHere')
-//   .then(data => console.log(data)); 
-
     return (
-        <form className={styles.searchContainer} onSubmit={onSubmit}>
-            <div className={styles.searchBox}>
-                <input className={styles.searchInput} type="text" value={searchTerm} onChange={handleChange} />
-                <button className={styles.searchButton} type="submit">
-                  <FaSearch size={20} />
-                </button>
+        <div>
+            <form className={styles.searchContainer} onSubmit={onSubmit}>
+                <div className={styles.searchBox}>
+                    <input className={styles.searchInput} type="text" value={searchTerm} onChange={handleChange} />
+                    <button className={styles.searchButton} type="submit">
+                      <FaSearch size={20} />
+                    </button>
+                </div>
+            </form>
+            <div className={stylesGrid.gamesGrid}>
+               {queryGame.map((queryGame) => (
+                  <GameCard key={queryGame.id} games={queryGame} />
+               ))}
             </div>
-        </form>
+        </div>
     )
 }
