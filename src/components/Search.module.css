@@ -20,12 +20,20 @@
     height: 100%;
     border: none;
     background: none;
+    color: var(--color2);
 }
 
 .searchInput {
     height: 30px;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 5px 50px 5px 30px;
+    border: 1px solid var(--color3);
+    color: var(--color2);
+    background-color: var(--color3-opacity);
+}
+.searchInput:focus, .searchButton:focus {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color2);
     outline: none;
-    border: none;
 }

@@ -9,12 +9,6 @@ export function GamesGrid() {
     const [popularGames, setPopularGames] = useState([]);
     const [upcomingGames, setUpcomingGames] = useState([]);
     const [newGames, setNewGames] = useState([]);
-
-    // useEffect(() => {
-    //     getNewGames().then(data => {
-    //         setGames(data.results);
-    //       });
-    // }, []);
     
     useEffect(() => getPopularGames(), []);
     useEffect(() => getUpcomingGames(), []);

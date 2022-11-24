@@ -1,9 +1,14 @@
-import { HomeContainer } from "../components/HomeContainer";
+import { GamesGrid } from '../components/GamesGrid';
+import { Search } from '../components/Search';
+import styles from './LandingPage.module.css';
 
 export function LandingPage() {
     return (
         <main>
-            <HomeContainer />
+            <div className={styles.bgImageCtn}>
+                <Search />
+            </div>
+            <GamesGrid />
         </main>
     )
 }

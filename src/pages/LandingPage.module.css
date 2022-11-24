@@ -1,7 +1,6 @@
 .bgImageCtn {
     position: relative;
-    /* background-color: rgb(34, 33, 33); */
     background-image: url('https://i.blogs.es/95bc11/2560_3000-1-/1366_2000.jpg');
-    background-position: center;    
+    background-size: cover;    
     padding: 150px 0;
 }

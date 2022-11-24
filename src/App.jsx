@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 import { GameDetails } from './pages/GameDetails';
-import { Search } from './components/Search';
 
 function App() {
   return (
@@ -17,12 +16,11 @@ function App() {
         <header>
           <Navbar />
           <Link to='/'>
-            <h1 className={styles.title}>Video Games</h1>
+            <h1 className={styles.title}>Portal Games Project</h1>
           </Link>
         </header>
         <Routes>
           <Route path='/' element={<LandingPage />} />
-          <Route path='/search' element={<Search />} />
           <Route path='/games/details/:gameId' element={<GameDetails />} />
         </Routes>
         <Footer />

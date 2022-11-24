@@ -1,9 +1,12 @@
 :root {
     --color1: #292929;
+    --color2: #e4e1e1;
+    --color3: #a70c16;
+    --color3-opacity: #a70c1694;
 }
 
 .title {
     text-align: center;
-    color: white;
-    font-size: 3rem;
+    font-size: 2rem;
+    color: var(--color3);
 }
