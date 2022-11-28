@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 import { GameDetails } from './pages/GameDetails';
+import GameContextProvider from './contexts/GameContextProvider';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
           </Link>
         </header>
         <Routes>
-          <Route path='/' element={<LandingPage />} />
+          <Route element={<GameContextProvider />}>
+            <Route path='/' element={<LandingPage />} />
+          </Route>
           <Route path='/games/details/:gameId' element={<GameDetails />} />
         </Routes>
         <Footer />

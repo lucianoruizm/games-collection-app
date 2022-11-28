@@ -9,6 +9,7 @@ export function Search() {
 
     const [searchTerm, setSearchTerm] = useState("")
     const [queryGame, setQueryGame] = useState([])
+    const [fetchedSearch, setFetchedSearch] = useState(false)
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
@@ -24,6 +25,7 @@ export function Search() {
         setQueryGame([])
         let response = await fetch(searchGamesGet(slug));
         let data = await response.json()
+        data? setFetchedSearch(true) : setFetchedSearch(false)
         setQueryGame(data.results)
         setSearchTerm("")
     }
@@ -39,9 +41,9 @@ export function Search() {
                 </div>
             </form>
             <div className={stylesGrid.gamesGrid}>
-               {queryGame.map((queryGame) => (
+               {fetchedSearch? queryGame.map((queryGame) => (
                   <GameCard key={queryGame.id} games={queryGame} />
-               ))}
+               )) : null}
             </div>
         </div>
     )
