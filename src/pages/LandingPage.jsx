@@ -10,12 +10,23 @@ export const LandingPage = () => {
         popularGames,
         upcomingGames,
         newGames,
+        fetchedSearch, 
+        searchTerm, 
+        setSearchTerm, 
+        getQueryGame, 
+        queryGame,
     } = useContext(GameContext);
 
     return (
         <main> 
             <div className={styles.bgImageCtn}>
-                <Search />
+                <Search 
+                  fetchedSearch={fetchedSearch}
+                  searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm}
+                  getQueryGame={getQueryGame}
+                  queryGame={queryGame}
+                />
             </div>
             <GamesGrid 
               popularGames={popularGames}

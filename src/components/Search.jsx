@@ -1,15 +1,9 @@
 import styles from './Search.module.css';
 import { FaSearch } from "react-icons/fa";
-import { useState } from 'react';
-import { searchGamesGet } from '../utils/httpClient';
 import { GameCard } from './GameCard';
 import stylesGrid from './GamesGrid.module.css';
 
-export function Search() {
-
-    const [searchTerm, setSearchTerm] = useState("")
-    const [queryGame, setQueryGame] = useState([])
-    const [fetchedSearch, setFetchedSearch] = useState(false)
+export function Search({searchTerm, setSearchTerm, getQueryGame, queryGame}) {
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
@@ -19,15 +13,6 @@ export function Search() {
         e.preventDefault()
         let slug = searchTerm.split(' ').join('-').toLowerCase()
         getQueryGame(slug)
-    }
-
-    const getQueryGame = async (slug) => { 
-        setQueryGame([])
-        let response = await fetch(searchGamesGet(slug));
-        let data = await response.json()
-        data? setFetchedSearch(true) : setFetchedSearch(false)
-        setQueryGame(data.results)
-        setSearchTerm("")
     }
 
     return (
@@ -41,9 +26,9 @@ export function Search() {
                 </div>
             </form>
             <div className={stylesGrid.gamesGrid}>
-               {fetchedSearch? queryGame.map((queryGame) => (
+               { queryGame?.map((queryGame) => (
                   <GameCard key={queryGame.id} games={queryGame} />
-               )) : null}
+               ))}
             </div>
         </div>
     )
