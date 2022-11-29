@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
+:root {
+  --color1: #292929;
+  --color2: #e4e1e1;
+  --color3: #a70c16;
+  --color3-opacity: #a70c1694;
+}
+
 body {
   margin: 0;
   font-family: 'Fjalla One', sans-serif;
   background-color: rgb(22, 17, 22);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 a {

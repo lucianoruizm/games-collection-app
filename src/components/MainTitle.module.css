@@ -1,0 +1,10 @@
+.titleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color3);
+}
