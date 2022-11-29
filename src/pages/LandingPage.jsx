@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { GameCard } from '../components/GameCard';
 import { GamesGrid } from '../components/GamesGrid';
 import { Search } from '../components/Search';
 import { GameContext } from '../contexts/GameContextProvider';
@@ -21,18 +22,28 @@ export const LandingPage = () => {
         <main> 
             <div className={styles.bgImageCtn}>
                 <Search 
-                  fetchedSearch={fetchedSearch}
                   searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}
                   getQueryGame={getQueryGame}
-                  queryGame={queryGame}
                 />
             </div>
-            <GamesGrid 
-              popularGames={popularGames}
-              upcomingGames={upcomingGames}
-              newGames={newGames}
-            />
+            {fetchedSearch ? (
+                <div className={styles.listContainer}>
+                    <div className={styles.gamesGrid}>
+                      { queryGame?.map((queryGame) => (
+                        <GameCard key={queryGame.id} games={queryGame} />
+                      ))}
+                    </div>
+                </div>
+                ) : (
+                <GamesGrid 
+                  popularGames={popularGames}
+                  upcomingGames={upcomingGames}
+                  newGames={newGames}
+                  queryGame={queryGame}
+                  fetchedSearch={fetchedSearch}
+                />
+            )}
         </main>
     )
 }

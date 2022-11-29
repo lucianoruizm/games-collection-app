@@ -18,7 +18,7 @@ const GameContextProvider = ({children}) => {
             let response = await fetch(popularGamesGet());
             let data = await response.json();
             setPopularGames(data.results);
-            setFetchedSearch(false);
+            setFetchedSearch(false)
         }
         getPopularGames()
     }, []);
@@ -31,7 +31,7 @@ const GameContextProvider = ({children}) => {
           .then(res => res.json())
           .then(data => {
             setUpcomingGames(data.results)
-            setFetchedSearch(false);
+            setFetchedSearch(false)
           })
           .catch(error => console.log(error));
     }
@@ -41,7 +41,7 @@ const GameContextProvider = ({children}) => {
           .then(res => res.json())
           .then(data => {
             setNewGames(data.results)
-            setFetchedSearch(false);
+            setFetchedSearch(false)
           })
           .catch(error => console.log(error));
     }
@@ -52,6 +52,7 @@ const GameContextProvider = ({children}) => {
       let data = await response.json()
       setQueryGame(data.results)
       setSearchTerm("")
+      data ? setFetchedSearch(true) : setFetchedSearch(false)
   }
 
     return (

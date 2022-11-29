@@ -1,9 +1,7 @@
 import styles from './Search.module.css';
 import { FaSearch } from "react-icons/fa";
-import { GameCard } from './GameCard';
-import stylesGrid from './GamesGrid.module.css';
 
-export function Search({searchTerm, setSearchTerm, getQueryGame, queryGame}) {
+export function Search({searchTerm, setSearchTerm, getQueryGame}) {
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
@@ -25,11 +23,6 @@ export function Search({searchTerm, setSearchTerm, getQueryGame, queryGame}) {
                     </button>
                 </div>
             </form>
-            <div className={stylesGrid.gamesGrid}>
-               { queryGame?.map((queryGame) => (
-                  <GameCard key={queryGame.id} games={queryGame} />
-               ))}
-            </div>
         </div>
     )
 }
