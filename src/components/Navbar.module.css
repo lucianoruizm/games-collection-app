@@ -1,12 +1,47 @@
-.navbar {
-    padding: 10px;
-    background-color: rgb(34, 33, 33);
+header {
+    padding: 5px;
+    background-color: var(--color1);
 }
 
-.navbarText {
+li {
+    list-style: none;
+    cursor: pointer;
+    color: var(--color6);
+}
+
+li:hover {
+    color: var(--color5);
+}
+
+.hiMenu {
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.desktopNavbar {
+    display: none;
+}
+
+.headerNavigation {
     display: flex;
     align-items: center;
-    gap: 50px;
-    list-style: none;
+}
+
+.logo {
     color: white;
 }
+
+.hideMenu {
+    display: none;
+}
+
+.showMenu {
+    display: flex;
+    z-index: 998;
+    background-color: var(--color1);
+    position: fixed;
+    width: 100%;
+}
+
+

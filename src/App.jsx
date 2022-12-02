@@ -14,10 +14,8 @@ function App() {
   
   return (
       <Router>
-        <header>
           <Navbar />
           <MainTitle />
-        </header>
         <Routes>
           <Route element={<GameContextProvider />}>
             <Route path='/' element={<LandingPage />} />
