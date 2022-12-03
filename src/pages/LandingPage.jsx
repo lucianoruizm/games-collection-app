@@ -3,7 +3,7 @@ import { GameCard } from '../components/GameCard';
 import { GamesGrid } from '../components/GamesGrid';
 import { Search } from '../components/Search';
 import { GameContext } from '../contexts/GameContextProvider';
-import styles from './LandingPage.module.css';
+import styles from '../components/GamesGrid.module.css';
 
 export const LandingPage = () => {
 
@@ -19,14 +19,12 @@ export const LandingPage = () => {
     } = useContext(GameContext);
 
     return (
-        <main> 
-            <div className={styles.bgImageCtn}>
-                <Search 
-                  searchTerm={searchTerm}
-                  setSearchTerm={setSearchTerm}
-                  getQueryGame={getQueryGame}
-                />
-            </div>
+        <main>
+            <Search 
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              getQueryGame={getQueryGame}
+            />
             {fetchedSearch ? (
                 <div className={styles.listContainer}>
                     <div className={styles.gamesGrid}>

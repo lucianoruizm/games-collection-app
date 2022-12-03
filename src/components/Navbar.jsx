@@ -22,7 +22,9 @@ export function Navbar() {
                     </ul>
               </nav>
               <HiMenu className={styles.hiMenu} onClick={handleClick} />
-              <h4 className={styles.logo}>LOGO</h4>
+              <div className={styles.logoContainer}>
+                <a href="/"><img className={styles.logo} src='./logoGamedictionPortalDark.png' alt=''/></a>
+                </div>
             </div>
           </header>
           <div className={`${navbarOpen ? styles.showMenu : styles.hideMenu}`}>

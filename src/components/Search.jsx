@@ -14,7 +14,6 @@ export function Search({searchTerm, setSearchTerm, getQueryGame}) {
     }
 
     return (
-        <div>
             <form className={styles.searchContainer} onSubmit={onSubmit}>
                 <div className={styles.searchBox}>
                     <input className={styles.searchInput} type="text" value={searchTerm} onChange={handleChange} />
@@ -23,6 +22,5 @@ export function Search({searchTerm, setSearchTerm, getQueryGame}) {
                     </button>
                 </div>
             </form>
-        </div>
     )
 }
