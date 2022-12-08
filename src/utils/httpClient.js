@@ -37,4 +37,5 @@ export const popularGamesGet = () => `${ url_api }${ popularGames }`;
 export const upcomingGamesGet = () => `${ url_api }${ upcomingGames }`;
 export const newGamesGet = () => `${ url_api }${ newGames }`;
 export const gameDetailsGet = (game_id) => `${ url_api }games/${ game_id }?key=${ apiKey }`;
+export const gameScreenshotsGet = (game_id) => `${ url_api }games/${ game_id }/screenshots?key=${ apiKey }`;
 export const searchGamesGet = (game) => `${ url_api }games?key=${ apiKey }&search=${game}&page_size=21`;

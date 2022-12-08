@@ -27,10 +27,28 @@
 
 @media (max-width: 560px) {
     .gameCard {
-        width: 95%;
+        margin: auto;
+        width: 80%;
         font-size: 1rem;
     }
     .gameCard {
-        height: auto;
+        width: 70%;
+        height: 250px;
+    }
+    .gameImage {
+        height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .gameCard {
+        width: 90%;
+        height: 200px;
+    }
+    .gameImage {
+        height: 80px;
+    }
+    .gameImage {
+        height: 130px;
     }
 }
