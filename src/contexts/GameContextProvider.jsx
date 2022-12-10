@@ -12,12 +12,14 @@ const GameContextProvider = ({children}) => {
     const [searchTerm, setSearchTerm] = useState("")
     const [queryGame, setQueryGame] = useState([])
     const [fetchedSearch, setFetchedSearch] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     
     useEffect(() => { 
         const getPopularGames = async () => {
             let response = await fetch(popularGamesGet());
             let data = await response.json();
             setPopularGames(data.results);
+            setIsLoading(false)
             setFetchedSearch(false)
         }
         getPopularGames()
@@ -31,6 +33,7 @@ const GameContextProvider = ({children}) => {
           .then(res => res.json())
           .then(data => {
             setUpcomingGames(data.results)
+            setIsLoading(false)
             setFetchedSearch(false)
           })
           .catch(error => console.log(error));
@@ -41,6 +44,7 @@ const GameContextProvider = ({children}) => {
           .then(res => res.json())
           .then(data => {
             setNewGames(data.results)
+            setIsLoading(false)
             setFetchedSearch(false)
           })
           .catch(error => console.log(error));
@@ -51,12 +55,13 @@ const GameContextProvider = ({children}) => {
       let response = await fetch(searchGamesGet(slug));
       let data = await response.json()
       setQueryGame(data.results)
+      setIsLoading(false)
       setSearchTerm("")
       data ? setFetchedSearch(true) : setFetchedSearch(false)
   }
 
     return (
-      <GameContext.Provider value={{popularGames, upcomingGames, newGames, fetchedSearch, searchTerm, setSearchTerm, getQueryGame, queryGame}}>
+      <GameContext.Provider value={{popularGames, upcomingGames, newGames, fetchedSearch, searchTerm, setSearchTerm, getQueryGame, queryGame, isLoading}}>
         <Outlet />
       </GameContext.Provider>
     )
