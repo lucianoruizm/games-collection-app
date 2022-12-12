@@ -4,7 +4,8 @@
     background-color: var(--color1);
     text-align: left;
     font-size: 1.5rem;
-    height: 300px;
+    width: 110%;
+    height: 280px;
     padding-bottom: 50px;
     border-radius: 9px;
     overflow: hidden;
@@ -20,29 +21,37 @@
     background-color: rgb(233, 231, 231);
 }
 
+.GameCardBody {
+    padding: 10px 20px;
+}
+
 .gameTitle {
     font-size: 1.2rem;
-    padding: 10px 20px;
+}
+
+.gamePlatform {
+    font-size: .9rem;
+    color: var(--color6);
 }
 
 @media (max-width: 560px) {
     .gameCard {
         margin: auto;
         width: 80%;
-        font-size: 1rem;
-    }
-    .gameCard {
-        width: 70%;
         height: 250px;
+        font-size: 1rem;
     }
     .gameImage {
         height: 200px;
+    }
+    .gamePlatform {
+        font-size: .6rem;
     }
 }
 
 @media (max-width: 450px) {
     .gameCard {
-        width: 90%;
+        max-width: 80%;
         height: 200px;
     }
     .gameImage {

@@ -11,7 +11,10 @@ export function GameCard({ games }) {
               alt={games.name}
               className={styles.gameImage}
             />
-            <h3 className={styles.gameTitle}>{games.name}</h3>
+            <div className={styles.GameCardBody}>
+                <h3 className={styles.gameTitle}>{games.name}</h3>
+                <p className={styles.gamePlatform}>{games.platforms?.map(plat => plat.platform.name).join('- ')}</p>
+            </div>
             </Link>
         </div>
     )
