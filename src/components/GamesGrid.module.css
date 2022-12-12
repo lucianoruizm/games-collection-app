@@ -1,18 +1,20 @@
 h1 {
-    color: white;
+    color: var(--color3);
+    margin: 20px auto;
 }
 
 .listContainer {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 20px;
 }
 
 .gamesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     gap: 40px;
-    padding: 40px;
+    padding: 20px;
     justify-content: center;
 }
 
