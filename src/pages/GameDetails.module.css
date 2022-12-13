@@ -40,6 +40,11 @@ strong {
 .gameImage {
     width: 100%;
     height: 100%;
+    cursor: pointer;
+}
+
+.gameImage:hover {
+    opacity: 0.8;
 }
 
 .gameDetails {
