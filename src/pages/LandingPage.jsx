@@ -12,12 +12,14 @@ export const LandingPage = () => {
         popularGames,
         upcomingGames,
         newGames,
+        fetchedPopularGames,
+        fetchedUpcomingGames,
+        fetchedNewGames,
         fetchedSearch, 
         searchTerm, 
         setSearchTerm, 
         getQueryGame, 
         queryGame,
-        isLoading,
     } = useContext(GameContext);
 
     
@@ -29,7 +31,19 @@ export const LandingPage = () => {
               setSearchTerm={setSearchTerm}
               getQueryGame={getQueryGame}
             />
-            { fetchedSearch ? ( 
+            {!fetchedSearch ? (
+              fetchedPopularGames &&
+              fetchedUpcomingGames &&
+              fetchedNewGames ? (
+                  <GamesGrid 
+                    popularGames={popularGames}
+                    upcomingGames={upcomingGames}
+                    newGames={newGames}
+                  />
+              ) : (  
+                  <Spinner />
+                )
+              ) : queryGame.length ? (
                   <div className={styles.listContainer}>
                         <div className={styles.gamesGrid}>
                           { queryGame?.map((queryGame) => (
@@ -37,19 +51,9 @@ export const LandingPage = () => {
                           ))}
                         </div>
                   </div>
-              ) : ( 
-                isLoading ? (
+                ) : (
                   <Spinner />
-              ) : (
-                  <GamesGrid 
-                    popularGames={popularGames}
-                    upcomingGames={upcomingGames}
-                    newGames={newGames}
-                    queryGame={queryGame}
-                    fetchedSearch={fetchedSearch}
-                  />
                 )
-            )
             }  
         </main>
     )
